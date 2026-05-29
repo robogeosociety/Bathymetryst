@@ -1,0 +1,9 @@
+# Bathymetryst data pipeline dependencies.
+# sea_level.py and build_manifest.py are stdlib-only; these are for fetch_* and the model.
+numpy>=1.26
+rasterio>=1.3
+rioxarray>=0.15
+xarray>=2024.1
+geopandas>=0.14
+shapely>=2.0
+requests>=2.31

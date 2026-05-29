@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bathymetryst/schema/dem_metadata.schema.json",
+  "title": "DEMMetadata",
+  "description": "Provenance for the elevation grid the model runs on.",
+  "type": "object",
+  "required": ["source", "resolution_arcsec", "bounds", "crs", "vertical_datum"],
+  "additionalProperties": false,
+  "properties": {
+    "source": { "type": "string", "description": "e.g. 'GEBCO_2024', 'ETOPO_2022'." },
+    "resolution_arcsec": { "type": "number" },
+    "bounds": {
+      "type": "array",
+      "description": "[west, south, east, north] in EPSG:4326.",
+      "items": { "type": "number" },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "crs": { "type": "string", "description": "e.g. 'EPSG:4326'." },
+    "vertical_datum": { "type": "string", "description": "e.g. 'MSL'." },
+    "retrieved_at": { "type": ["string", "null"], "description": "ISO 8601 timestamp." }
+  }
+}

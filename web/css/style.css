@@ -1,0 +1,90 @@
+:root {
+  --bg: #0b1f2a;
+  --panel: rgba(8, 24, 33, 0.86);
+  --ink: #e8f1f5;
+  --muted: #8fb0bf;
+  --accent: #46c2c8;
+  --land: #f2c14e;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+#map { position: absolute; inset: 0; }
+
+#title {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  background: var(--panel);
+  padding: 10px 16px;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+}
+#title h1 { margin: 0; font-size: 1.25rem; letter-spacing: 0.5px; }
+#title p { margin: 2px 0 0; color: var(--muted); font-size: 0.8rem; }
+
+#panel {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: min(720px, calc(100% - 32px));
+  background: var(--panel);
+  border: 1px solid rgba(70, 194, 200, 0.25);
+  border-radius: 14px;
+  padding: 16px 20px;
+  backdrop-filter: blur(8px);
+}
+
+.slice-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.metrics { display: flex; gap: 24px; margin-bottom: 14px; flex-wrap: wrap; }
+.metric { display: flex; flex-direction: column; }
+.metric .value { font-size: 1.4rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.metric .key { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+.slider-wrap { display: flex; align-items: center; gap: 14px; }
+.slider-wrap .end { font-size: 0.72rem; color: var(--muted); white-space: nowrap; line-height: 1.2; }
+.slider-wrap .end small { color: var(--muted); opacity: 0.7; }
+.slider-wrap .min { text-align: right; }
+
+#slider {
+  flex: 1;
+  appearance: none;
+  height: 6px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--land));
+  outline: none;
+}
+#slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--accent);
+  cursor: pointer;
+}
+#slider::-moz-range-thumb {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--accent);
+  cursor: pointer;
+}
+
+.note { margin: 10px 0 0; font-size: 0.72rem; color: var(--muted); min-height: 1em; }

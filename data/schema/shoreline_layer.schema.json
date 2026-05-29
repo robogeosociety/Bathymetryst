@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bathymetryst/schema/shoreline_layer.schema.json",
+  "title": "ShorelineLayer",
+  "description": "Renderable shoreline result for a time slice. Method-agnostic.",
+  "type": "object",
+  "required": ["time_slice_id", "sea_level_m", "source_method", "land_area_km2", "land_delta_km2"],
+  "additionalProperties": false,
+  "properties": {
+    "time_slice_id": { "type": "string", "description": "References TimeSlice.id." },
+    "sea_level_m": { "type": "number" },
+    "source_method": { "type": "string", "enum": ["bathtub", "paleodem"] },
+    "overlay_url": { "type": ["string", "null"], "description": "Relative URL to GeoJSON/PNG/tiles; null for seed." },
+    "land_area_km2": { "type": "number" },
+    "land_delta_km2": { "type": "number", "description": "Land vs present; positive = gained." }
+  }
+}

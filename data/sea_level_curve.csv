@@ -1,0 +1,15 @@
+# Approximate, illustrative global sea-level control points for the MVP.
+# Anchored to Lambeck et al. (2014) and Spratt & Lisiecki (2016); see docs/data-sources.md.
+# years_before_present is relative to 1950 CE. sea_level_m is negative below present datum.
+years_before_present,sea_level_m,source
+0,0.0,present
+5000,-3.0,lambeck2014
+8000,-14.0,lambeck2014
+10000,-40.0,lambeck2014
+12000,-62.0,lambeck2014
+14000,-92.0,lambeck2014
+16000,-105.0,lambeck2014
+18000,-120.0,lambeck2014
+20000,-125.0,lambeck2014
+22000,-130.0,lambeck2014
+26000,-130.0,lambeck2014

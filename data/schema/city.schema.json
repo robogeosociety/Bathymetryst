@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bathymetryst/schema/city.schema.json",
+  "title": "City",
+  "description": "A major coastal city for the present-day basemap.",
+  "type": "object",
+  "required": ["name", "country", "lat", "lon", "population"],
+  "additionalProperties": false,
+  "properties": {
+    "name": { "type": "string" },
+    "country": { "type": "string" },
+    "lat": { "type": "number", "minimum": -90, "maximum": 90 },
+    "lon": { "type": "number", "minimum": -180, "maximum": 180 },
+    "population": { "type": "integer", "minimum": 0 },
+    "elevation_m": { "type": ["number", "null"], "description": "Present-day ground elevation." },
+    "submerged_below_sea_level_m": { "type": ["number", "null"], "description": "Offset at which the city floods, if ever." }
+  }
+}

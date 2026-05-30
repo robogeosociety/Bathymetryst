@@ -216,3 +216,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- Bathymetryst ---
+# Large source/generated geodata is not committed; fetch via the pipeline.
+data/raw/
+data/processed/
+# Generated shoreline overlays (keep the committed manifest + seed vectors).
+web/data/*.png
+web/data/*.tif
+web/data/overlays/
+.venv/

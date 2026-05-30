@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bathymetryst/schema/time_slice.schema.json",
+  "title": "TimeSlice",
+  "description": "A point on the climate-driven timeline; the axis the slider walks.",
+  "type": "object",
+  "required": ["id", "label", "years_before_present", "global_sea_level_m", "source"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "description": "Stable identifier, e.g. 't0', 'lgm'." },
+    "label": { "type": "string" },
+    "years_before_present": { "type": "number", "description": "BP relative to 1950 CE." },
+    "global_sea_level_m": { "type": "number", "description": "Offset vs present datum; negative below." },
+    "ice_volume_proxy": { "type": ["number", "null"], "description": "Optional proxy such as benthic delta-18O." },
+    "source": { "type": "string", "description": "Citation key, e.g. 'lambeck2014'." }
+  }
+}

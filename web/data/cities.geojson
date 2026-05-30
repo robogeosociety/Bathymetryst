@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "_note": "Seed sample of major coastal cities. Replaced by pipeline/fetch_basemap.py output.",
+  "features": [
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-74.006, 40.7128] }, "properties": { "name": "New York", "country": "United States", "population": 18800000, "elevation_m": 10 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-118.2437, 34.0522] }, "properties": { "name": "Los Angeles", "country": "United States", "population": 12500000, "elevation_m": 71 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-43.1729, -22.9068] }, "properties": { "name": "Rio de Janeiro", "country": "Brazil", "population": 13300000, "elevation_m": 2 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-58.3816, -34.6037] }, "properties": { "name": "Buenos Aires", "country": "Argentina", "population": 15200000, "elevation_m": 25 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [-0.1276, 51.5072] }, "properties": { "name": "London", "country": "United Kingdom", "population": 9300000, "elevation_m": 11 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [4.9041, 52.3676] }, "properties": { "name": "Amsterdam", "country": "Netherlands", "population": 1150000, "elevation_m": -2 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [3.0588, 36.7538] }, "properties": { "name": "Algiers", "country": "Algeria", "population": 3900000, "elevation_m": 5 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [31.2357, 30.0444] }, "properties": { "name": "Cairo", "country": "Egypt", "population": 21300000, "elevation_m": 23 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [18.4241, -33.9249] }, "properties": { "name": "Cape Town", "country": "South Africa", "population": 4600000, "elevation_m": 25 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [72.8777, 19.076] }, "properties": { "name": "Mumbai", "country": "India", "population": 20700000, "elevation_m": 14 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [103.8198, 1.3521] }, "properties": { "name": "Singapore", "country": "Singapore", "population": 5900000, "elevation_m": 15 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [106.8456, -6.2088] }, "properties": { "name": "Jakarta", "country": "Indonesia", "population": 10800000, "elevation_m": 8 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [121.4737, 31.2304] }, "properties": { "name": "Shanghai", "country": "China", "population": 27000000, "elevation_m": 4 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [139.6917, 35.6895] }, "properties": { "name": "Tokyo", "country": "Japan", "population": 37400000, "elevation_m": 40 } },
+    { "type": "Feature", "geometry": { "type": "Point", "coordinates": [151.2093, -33.8688] }, "properties": { "name": "Sydney", "country": "Australia", "population": 5300000, "elevation_m": 19 } }
+  ]
+}

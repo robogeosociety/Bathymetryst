@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-05-29T06:30:14Z",
+  "present_land_area_km2": 148940000.0,
+  "slices": [
+    {
+      "id": "t120",
+      "label": "Last Glacial Maximum (~18 ka)",
+      "years_before_present": 18000.0,
+      "sea_level_m": -120.0,
+      "source_method": "bathtub",
+      "overlay_url": null,
+      "land_area_km2": 169440000.0,
+      "land_delta_km2": 20500000.0
+    },
+    {
+      "id": "t100",
+      "label": "100 m below present (~16 ka)",
+      "years_before_present": 16000.0,
+      "sea_level_m": -100.0,
+      "source_method": "bathtub",
+      "overlay_url": null,
+      "land_area_km2": 167940000.0,
+      "land_delta_km2": 19000000.0
+    },
+    {
+      "id": "t80",
+      "label": "80 m below present (~14 ka)",
+      "years_before_present": 14000.0,
+      "sea_level_m": -80.0,
+      "source_method": "bathtub",
+      "overlay_url": null,
+      "land_area_km2": 165740000.0,
+      "land_delta_km2": 16800000.0
+    },
+    {
+      "id": "t60",
+      "label": "60 m below present (~12 ka)",
+      "years_before_present": 12000.0,
+      "sea_level_m": -60.0,
+      "source_method": "bathtub",
+      "overlay_url": null,
+      "land_area_km2": 162940000.0,
+      "land_delta_km2": 14000000.0
+    },
+    {
+      "id": "t40",
+      "label": "40 m below present (~10 ka)",
+      "years_before_present": 10000.0,
+      "sea_level_m": -40.0,
+      "source_method": "bathtub",
+      "overlay_url": null,
+      "land_area_km2": 159440000.0,
+      "land_delta_km2": 10500000.0
+    },
+    {
+      "id": "t20",
+      "label": "20 m below present (~8 ka)",
+      "years_before_present": 8000.0,
+      "sea_level_m": -20.0,
+      "source_method": "bathtub",
+      "overlay_url": null,
+      "land_area_km2": 154940000.0,
+      "land_delta_km2": 6000000.0
+    },
+    {
+      "id": "t0",
+      "label": "Present (glacial minimum)",
+      "years_before_present": 0.0,
+      "sea_level_m": 0.0,
+      "source_method": "bathtub",
+      "overlay_url": null,
+      "land_area_km2": 148940000.0,
+      "land_delta_km2": 0.0
+    }
+  ],
+  "dem": {
+    "source": "GEBCO_2024",
+    "resolution_arcsec": 15.0,
+    "bounds": [
+      -180.0,
+      -90.0,
+      180.0,
+      90.0
+    ],
+    "crs": "EPSG:4326",
+    "vertical_datum": "MSL",
+    "retrieved_at": null
+  }
+}

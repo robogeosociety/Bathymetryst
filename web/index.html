@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Bathymetryst — Ancient Shorelines</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Scrub between the last glacial maximum and today and watch the world's coastlines change." />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <header id="title">
+    <h1>Bathymetryst</h1>
+    <p>Explore ancient shorelines</p>
+  </header>
+
+  <section id="panel" aria-label="Timeline and statistics">
+    <div class="readout">
+      <div class="slice-label" id="sliceLabel">Present (glacial minimum)</div>
+      <div class="metrics">
+        <div class="metric">
+          <span class="value" id="seaLevel">0 m</span>
+          <span class="key">sea level vs today</span>
+        </div>
+        <div class="metric">
+          <span class="value" id="years">0 ka</span>
+          <span class="key">years before present</span>
+        </div>
+        <div class="metric">
+          <span class="value" id="landDelta">+0</span>
+          <span class="key">km² land vs today</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-wrap">
+      <span class="end min">Glacial minimum<br /><small>today · high seas</small></span>
+      <input type="range" id="slider" min="0" max="6" step="1" value="0"
+             aria-label="Sea-level timeline from glacial minimum to glacial maximum" />
+      <span class="end max">Glacial maximum<br /><small>LGM · low seas</small></span>
+    </div>
+    <p class="note" id="overlayNote"></p>
+  </section>
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/slider.js"></script>
+</body>
+</html>

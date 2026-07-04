@@ -93,7 +93,9 @@ class Manifest:
 
     generated_at: str
     present_land_area_km2: float
-    slices: list = field(default_factory=list)  # flattened TimeSlice + ShorelineLayer dicts
+    slices: list = field(
+        default_factory=list
+    )  # flattened TimeSlice + ShorelineLayer dicts
     dem: Optional[dict] = None
 
     def to_dict(self) -> dict:

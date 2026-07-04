@@ -17,7 +17,7 @@ from __future__ import annotations
 import datetime as _dt
 import json
 import os
-from typing import List, Optional
+from typing import Optional
 
 from . import config
 from .fetch_dem import dem_metadata
@@ -48,7 +48,7 @@ def _label_for(level_m: float, years_bp: float) -> str:
 def build_manifest(layers: Optional[list] = None) -> Manifest:
     """Build a Manifest. If `layers` (ShorelineLayer list) is given, use its areas."""
     curve = load_curve()
-    measured = {round(l.sea_level_m, 3): l for l in (layers or [])}
+    measured = {round(layer.sea_level_m, 3): layer for layer in (layers or [])}
 
     slices = []
     for level in config.SEA_LEVEL_SLICES_M:
@@ -62,16 +62,18 @@ def build_manifest(layers: Optional[list] = None) -> Manifest:
             delta = ESTIMATED_DELTA_KM2.get(level, 0.0)
             land_area = config.PRESENT_LAND_AREA_KM2 + delta
             overlay = None
-        slices.append({
-            "id": f"t{int(abs(level))}",
-            "label": _label_for(level, years_bp),
-            "years_before_present": years_bp,
-            "sea_level_m": level,
-            "source_method": config.SOURCE_METHOD,
-            "overlay_url": overlay,
-            "land_area_km2": land_area,
-            "land_delta_km2": delta,
-        })
+        slices.append(
+            {
+                "id": f"t{int(abs(level))}",
+                "label": _label_for(level, years_bp),
+                "years_before_present": years_bp,
+                "sea_level_m": level,
+                "source_method": config.SOURCE_METHOD,
+                "overlay_url": overlay,
+                "land_area_km2": land_area,
+                "land_delta_km2": delta,
+            }
+        )
 
     slices.sort(key=lambda s: s["sea_level_m"])  # ascending: -120 .. 0
     return Manifest(

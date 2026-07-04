@@ -15,7 +15,9 @@ from . import config
 from .models import ShorelineLayer
 
 
-def model_slice(dem_path: str, sea_level_m: float, time_slice_id: str) -> ShorelineLayer:
+def model_slice(
+    dem_path: str, sea_level_m: float, time_slice_id: str
+) -> ShorelineLayer:
     """Classify the DEM at one sea-level offset and return a ShorelineLayer.
 
     TODO:
